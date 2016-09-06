@@ -1,0 +1,31 @@
+
+@(message: String)
+<!DOCTYPE html>
+
+<html lang="ja">
+<head>
+    <title>81channel</title>
+</head>
+<body>
+
+<h1><FONT size="10" color="green">81channel</FONT></h1>
+
+<hr />
+<p>@order.title</p>
+
+<ul>
+    @(comment: List[String], id_topic: List[Int], id: List[Int])
+    @for(order <- orders) {
+
+    <li><a href="/topic">@order.title</a></li>
+
+    }
+
+</ul>
+
+<hr />
+<footer>
+    2016-9-1更新
+</footer>
+</body>
+</html>
